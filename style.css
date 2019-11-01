@@ -1,0 +1,12 @@
+body { font-family: 'Quicksand', 'Roboto', sans-serif; font-weight: 500 }
+
+#set-menu-open { margin: 1em 0 0 1em }
+#set-menu-close { margin: 1em 1em 0 0 }
+
+#set-menu-title { font-size: 2.975em; margin-top: 0; margin-left: 0.25em; }
+
+@keyframes screw-in { from { transform: rotate(0turn) scale(1) } to { transform: rotate(0.625turn) scale(0.9) } }
+@keyframes screw-out { from { transform: rotate(0.625turn) scale(0.9) } to { transform: rotate(0turn) scale(1) } }
+.screw-in { animation: screw-in 0.7s; transform: rotate(0.625turn) scale(0.9) }
+.screw-out { animation: screw-out 0.7s; transform: rotate(0turn) scale(1) }
+.screwed { transform: rotate(0.625turn) scale(0.9) }
