@@ -3,7 +3,8 @@ body { font-family: 'Quicksand', 'Roboto', sans-serif; font-weight: 500 }
 #set-menu-open { margin: 1em 0 0 1em }
 #set-menu-close { margin: 1em 1em 0 0 }
 
-#set-menu-title { font-size: 2.975em; margin-top: 0; margin-left: 0.25em; }
+#set-menu-title { font-size: 2.975em; margin: 0.05em 0 0 0.3em }
+#set-menu-subtitle { font-size: 1.5em; margin: 0 0 0 0.55em; }
 
 @keyframes screw-in { from { transform: rotate(0turn) scale(1) } to { transform: rotate(0.625turn) scale(0.9) } }
 @keyframes screw-out { from { transform: rotate(0.625turn) scale(0.9) } to { transform: rotate(0turn) scale(1) } }
