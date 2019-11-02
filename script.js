@@ -1,15 +1,32 @@
 const setMenu = $('#set-menu-wrap')
-const setMenuGears = $('#set-menu-open, #set-menu-close'); const setMenuOpen = $('#set-menu-open')
+const setMenuGears = $('#set-menu-open, #set-menu-close')
+const setMenuOpen = $('#set-menu-open')
 
-const mainContain = $('#main'); const dispMid = $('#mid')
-const dispHr = $('#hour'); const dispMin = $('#minute')
+const setMenuFmt = $('#set-menu-format-12, #set-menu-format-24')
+const setMenuFmt12 = $('#set-menu-format-12')
+const setMenuFmt24 = $('#set-menu-format-24')
 
-if ( localStorage.getItem('has-settings') != 'true' ) {
+const mainContain = $('#main')
+
+const dispHr = $('#hour')
+const dispMin = $('#minute')
+const dispMid = $('#mid')
+
+
+
+if ( localStorage.getItem('has-settings') == 'true' ) {
+
+    if ( localStorage.getItem('hour-format') == '12' ) setMenuFmt12.prop('checked', true)
+    else setMenuFmt24.prop('checked', true)
+
+} else {
 
     localStorage.setItem('has-settings', 'true')
-    localStorage.setItem('hour-format', '12')
+    localStorage.setItem('hour-format', '12'); setMenuFmt12.checked = true
 
 }
+
+
 
 $(document).ready(function(){
 
@@ -42,12 +59,24 @@ $(document).ready(function(){
 
 })
 
+
+
+setTimeout(() => {
+
+    setMenuFmt.on('change', () => { setTimeout(updateTime, 25) })
+    setMenuFmt12.on('change', () => { if ( setMenuFmt12.prop('checked') ) localStorage.setItem('hour-format', '12') })
+    setMenuFmt24.on('change', () => { if ( setMenuFmt24.prop('checked') ) localStorage.setItem('hour-format', '24') })
+
+}, 125)
+
+
+
 setInterval(updateTime, 1250); updateTime()
 function updateTime() {
 
     const date = new Date()
     const hour = date.getHours(); const minute = date.getMinutes()
-    const mid = (hour >= 12) ? "PM" : "AM"
+    const mid = (hour >= 12) ? 'PM' : 'AM'
 
     if ( localStorage.getItem('hour-format') == '24' ) {
         if ( !dispMid.hasClass('no-show') ) dispMid.addClass('no-show')
