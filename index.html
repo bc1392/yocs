@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
         <link rel="stylesheet" href="style.css">
 
     </head>
@@ -22,7 +23,7 @@
             </a>
         </div>
 
-        <ul id="set-menu-wrap" class="sidenav grey darken-3">
+        <ul id="set-menu-wrap" class="sidenav grey darken-3 white-text">
 
             <div class="right" id="set-menu-close-wrap">
                 <a class="btn-floating waves-effect waves-dark blue-grey darken-2 sidenav-close" data-target="set-menu-wrap" href="#" id="set-menu-close">
@@ -35,16 +36,29 @@
                 <p id="set-menu-subtitle">Yet Another Clock Site</p>
             </li>
 
+            <li id="set-menu-format">
+                <form id="set-menu-format-form" action="#">
+                    <p><label>
+                        <input name="set-menu-format" id="set-menu-format-12" type="radio" />
+                        <span class="white-text">12-Hour</span>
+                    </label></p>
+                    <p><label>
+                        <input name="set-menu-format" id="set-menu-format-24" type="radio" />
+                        <span class="white-text">24-Hour</span>
+                    </label></p>
+                </form>
+            </li>
+
         </ul>
 
 
         <div id="main" class="grey-text text-lighten-3">
 
             <h1 id="time">
-                <span id="hour-l">0</span><span id="hour-r">0</span>:<span id="minute-l">0</span><span id="minute-r">0</span>
-                <small id="meridesg">AM</small>
+                <span id="hour">12</span><span id="hm-sep">:</span><span id="minute">00</span>
+                <small id="mid">AM</small>
             </h1>
-            
+
         </div>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
