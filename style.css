@@ -1,7 +1,7 @@
 body { font-family: 'Quicksand', 'Roboto', sans-serif; font-weight: 500 }
 
-#set-menu-open { margin: 1em 0 0 1em; animation: fade-out 0.5s; animation-delay: 0.5s; filter: opacity(0) }
-#set-menu-open:hover { animation: fade-in 0.5s; filter: opacity(1) }
+#set-menu-open { margin: 1em 0 0 1em; animation: fade-out 0.5s ease 0.5s; filter: opacity(0) }
+#set-menu-open:hover { animation: fade-in 0.5s ease; filter: opacity(1) }
 #set-menu-open-wrap { position: absolute }
 #set-menu-close { margin: 1em 1em 0 0 }
 
@@ -18,18 +18,18 @@ body { font-family: 'Quicksand', 'Roboto', sans-serif; font-weight: 500 }
 
 @keyframes screw-in { from { transform: rotate(0turn) scale(1) } to { transform: rotate(0.625turn) scale(0.9) } }
 @keyframes screw-out { from { transform: rotate(0.625turn) scale(0.9) } to { transform: rotate(0turn) scale(1) } }
-.screw-in { animation: screw-in 0.7s; transform: rotate(0.625turn) scale(0.9) }
-.screw-out { animation: screw-out 0.7s; transform: rotate(0turn) scale(1) }
+.screw-in { animation: screw-in 0.7s ease; transform: rotate(0.625turn) scale(0.9) }
+.screw-out { animation: screw-out 0.7s ease; transform: rotate(0turn) scale(1) }
 .screwed { transform: rotate(0.625turn) scale(0.9) }
 
 @keyframes blur-in { from { filter: blur(0) } to { filter: blur(5px) } }
 @keyframes blur-out { from { filter: blur(5px) } to { filter: blur(0) } }
-.blur-in { animation: blur-in 0.7s; filter: blur(5px) }
-.blur-out { animation: blur-out 0.7s; filter: blur(0) }
+.blur-in { animation: blur-in 0.7s ease; filter: blur(5px) }
+.blur-out { animation: blur-out 0.7s ease; filter: blur(0) }
 .blurred { filter: blur(5px) }
 
 @keyframes fade-in { from { filter: opacity(0) } to { filter: opacity(1) } }
 @keyframes fade-out { from { filter: opacity(1) } to { filter: opacity(0) } }
-.fade-in { animation: fade-in 0.5s; filter: opacity(1) }
-.fade-out { animation: fade-out 0.5s; filter: opacity(0) }
+.fade-in { animation: fade-in 0.5s ease; filter: opacity(1) }
+.fade-out { animation: fade-out 0.5s ease; filter: opacity(0) }
 .faded-in { filter: opacity(1) !important } .faded-out { filter: opacity(0) !important }
