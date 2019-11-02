@@ -16,26 +16,36 @@
 
     <body class="grey darken-4 white-text">
 
-        <div class="left">
-            <a class="btn-floating waves-effect waves-dark blue-grey darken-3 sidenav-trigger" data-target="settings" href="#" id="set-menu-open">
+        <div class="left" id="set-menu-open-wrap">
+            <a class="btn-floating waves-effect waves-dark blue-grey darken-3 sidenav-trigger faded-in" data-target="set-menu-wrap" href="#" id="set-menu-open">
                 <i class="material-icons">settings</i>
             </a>
         </div>
 
-        <ul id="settings" class="sidenav grey darken-3">
+        <ul id="set-menu-wrap" class="sidenav grey darken-3">
 
-            <div class="right">
-                <a class="btn-floating waves-effect waves-dark blue-grey darken-2 sidenav-close" data-target="settings" href="#" id="set-menu-close">
+            <div class="right" id="set-menu-close-wrap">
+                <a class="btn-floating waves-effect waves-dark blue-grey darken-2 sidenav-close" data-target="set-menu-wrap" href="#" id="set-menu-close">
                     <i class="material-icons">settings</i>
                 </a>
             </div>
 
-            <div class="left">
+            <li id="set-menu-head">
                 <p id="set-menu-title">YOCS</p>
                 <p id="set-menu-subtitle">Yet Another Clock Site</p>
-            </div>
+            </li>
 
         </ul>
+
+
+        <div id="main" class="grey-text text-lighten-3">
+
+            <h1 id="time">
+                <span id="hour-l">0</span><span id="hour-r">0</span>:<span id="minute-l">0</span><span id="minute-r">0</span>
+                <small id="meridesg">AM</small>
+            </h1>
+            
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
