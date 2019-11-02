@@ -22,7 +22,7 @@ if ( localStorage.getItem('has-settings') == 'true' ) {
 } else {
 
     localStorage.setItem('has-settings', 'true')
-    localStorage.setItem('hour-format', '12'); setMenuFmt12.checked = true
+    localStorage.setItem('hour-format', '12'); setMenuFmt12.prop('checked', true)
 
 }
 
