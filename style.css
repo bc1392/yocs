@@ -14,9 +14,10 @@ body { font-family: 'Quicksand', 'Roboto', sans-serif; font-weight: 500 }
 #set-menu-wrap li form p span { font-size: 1.5em }
 
 #main { padding-top: 3em; }
-#time { margin: 0; font-size: 20vw; text-align: center }
+#time { margin: 0; font-size: 20vw; text-align: center; animation: fade-in 1s ease 0.5s 1 normal both }
 #hour, #minute { font-family: 'Verela Round', monospace }
-#hm-sep { vertical-align: text-top } #mid { font-weight: 500 }
+#hm-sep { vertical-align: text-top }
+#mid { font-weight: 500 }
 
 .no-show { display: none }
 
@@ -37,3 +38,12 @@ body { font-family: 'Quicksand', 'Roboto', sans-serif; font-weight: 500 }
 .fade-in { animation: fade-in 0.5s ease; filter: opacity(1) }
 .fade-out { animation: fade-out 0.5s ease; filter: opacity(0) }
 .faded-in { filter: opacity(1) !important } .faded-out { filter: opacity(0) !important }
+
+@keyframes breathe {
+    0%    { filter: opacity(0.25) }
+    12.5% { filter: opacity(1) }
+    50%   { filter: opacity(1) }
+    62.5% { filter: opacity(0.25) }
+    100%  { filter: opacity(0.25) }
+}
+.breathing { animation: breathe 2s ease 0s infinite }
